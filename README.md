@@ -27,8 +27,7 @@ If you want to compile from source:
     ***g++ color_src.cpp -o colors.exe**
 
 # Other Commands:
-***colors -help*** - shows help panel in console
-***colors -ver*** - prints version (oh, and --version too.)
+***colors -help*** - shows help panel in console and ***colors -ver*** - prints version (oh, and --version too.)
 
 Author: **xcorr**
 Website: **https://xcorr.neocities.org**
