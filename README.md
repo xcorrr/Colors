@@ -9,11 +9,8 @@ Use this program inside your Batch scripts to print colored messages to the term
 
 **Examples:**
     ***colors red "Err: Something went wrong!"***
-    ---
     ***colors green "Success: Task completed!"***
-    ---
     ***colors yellow "Warning: Check your input."***
-    ---
 
 # Supported Colors:
   **black      ,darkblue     ,darkgreen    ,darkaqua**
