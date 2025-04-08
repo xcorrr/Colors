@@ -29,5 +29,5 @@ If you want to compile from source:
 # Other Commands:
 ***colors -help*** - shows help panel in console and ***colors -ver*** - prints version (oh, and --version too.)
 
-Author: **xcorr**
+Author: **xcorr,**
 Website: **https://xcorr.neocities.org**
