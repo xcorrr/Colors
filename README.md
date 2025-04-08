@@ -8,8 +8,8 @@ Use this program inside your Batch scripts to print colored messages to the term
     ***colors <color> <message>***
 
 **Examples:**
-    ***colors red "Err: Something went wrong!"***
-    ***colors green "Success: Task completed!"***
+    ***colors red "Err: Something went wrong!",***
+    ***colors green "Success: Task completed!",***
     ***colors yellow "Warning: Check your input."***
 
 # Supported Colors:
