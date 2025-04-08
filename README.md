@@ -4,13 +4,16 @@
 # How to Use:
 Use this program inside your Batch scripts to print colored messages to the terminal.
 
-Syntax:
+**Syntax:**
     ***colors <color> <message>***
 
-Examples:
+**Examples:**
     ***colors red "Err: Something went wrong!"***
+    ---
     ***colors green "Success: Task completed!"***
+    ---
     ***colors yellow "Warning: Check your input."***
+    ---
 
 # Supported Colors:
   **black      ,darkblue     ,darkgreen    ,darkaqua**
@@ -24,7 +27,7 @@ then resets the color back to default.
 
 # How to Compile (optional):
 If you want to compile from source:
-    ***g++ color_src.cpp -o colors.exe**
+    ***g++ color_src.cpp -o colors.exe***
 
 # Other Commands:
 ***colors -help*** - shows help panel in console and ***colors -ver*** - prints version (oh, and --version too.)
