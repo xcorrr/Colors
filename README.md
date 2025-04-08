@@ -13,10 +13,10 @@ Examples:
     colorprint yellow "Warning: Check your input."
 
 # Supported Colors:
-  **black      darkblue     darkgreen    darkaqua**
-  **darkred    darkpurple   darkyellow   gray**
-  **darkgray   blue         green        aqua**
-  **red        purple       yellow       white**
+  **black      ,darkblue     ,darkgreen    ,darkaqua**
+  **,darkred    ,darkpurple   ,darkyellow   ,gray**
+  **,darkgray   ,blue         ,green        ,aqua**
+  **,red        ,purple       ,yellow       ,white.**
 
 # How It Works:
 -------------
