@@ -25,10 +25,12 @@ then resets the color back to default.
 
 How to Compile (optional):
 If you want to compile from source:
-    ***g++ colorsrc.cpp -o colors.exe***
+    ***g++ -O2 -static -o Colors.exe Colors_src.cpp -ladvapi32 -luser32***
 
 Other Commands:
 ***colors --help*** - shows help panel in console and ***colors -ver** - prints version (oh, and --version too.)
+***Colors -install*** - adds program to PATH.
+NOTE: this uses the registry (advapi32) and SendMessageTimeoutA (user32). MSVC will auto-link those via the #pragma comment(lib, ...) lines I added. If you're compiling with MinGW/g++, use the command above.
 
 Author: **xcorr,**
 Website: **https://xcorr.neocities.org**
