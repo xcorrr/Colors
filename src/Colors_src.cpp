@@ -148,7 +148,7 @@ void addToPathInteractive() {
     }
     std::string exeDir = fullPath.substr(0, lastSlash);
 
-    std::cout << "This will add the following folder to your user PATH:\n";
+    std::cout << "Colors: NOTE, This will add the following folder to your user PATH:\n";
     std::cout << "  " << exeDir << "\n";
     std::cout << "so you can run \"colors\" from any directory. Continue? (y/n): ";
 
@@ -156,18 +156,18 @@ void addToPathInteractive() {
     std::getline(std::cin, answer);
     std::string lowerAnswer = toLower(answer);
     if (lowerAnswer != "y" && lowerAnswer != "yes") {
-        std::cout << "Cancelled. PATH was not modified.\n";
+        std::cout << "Colors: Cancelled. PATH was not modified.\n";
         return;
     }
 
     std::string currentPath;
     if (!readUserPath(currentPath)) {
-        std::cerr << "Error: could not read your current PATH from the registry.\n";
+        std::cerr << "Colors: Error, could not read your current PATH from the registry.\n";
         return;
     }
 
     if (pathContainsDir(currentPath, exeDir)) {
-        std::cout << "This folder is already in your PATH. Nothing to do.\n";
+        std::cout << "Colors: This folder is already in your PATH. Nothing to do.\n";
         return;
     }
 
@@ -211,7 +211,7 @@ int main(int argc, char* argv[]) {
     }
     if (std::string(argv[1]) == "-ver" || std::string(argv[1]) == "-version" || std::string(argv[1]) == "--version") {
         std::cout << "Colors! - A tool developed by xcorr.\n";
-        std::cout << "Version: 1.0.0\n";
+        std::cout << "Version: 1.3, last updated 7/8/2026.\n";
         return 0;
     }
     if (std::string(argv[1]) == "-install" || std::string(argv[1]) == "--install" || std::string(argv[1]) == "-addtopath") {
