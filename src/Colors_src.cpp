@@ -194,18 +194,18 @@ void addToPathInteractive() {
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        std::cerr << "Usage: colors.exe <color> <message>\n";
+        std::cerr << "Usage: colors.exe <color> \"<message>\"\n";
         return 1;
     }
     if (std::string(argv[1]) == "/?" || std::string(argv[1]) == "-help" || std::string(argv[1]) == "--help") {
         std::cout << "Colors! - A tool developed by xcorr.\n";
         std::cout << "Github: https://github.com/xcorrr\n";
-        std::cout << "Usage: colors.exe <color> <message>\n";
+        std::cout << "Usage: colors.exe <color> \"<message>\"\n";
         std::cout << "Available colors:\n";
         for (const auto& pair : colorMap) {
             std::cout << "  " << pair.first << "\n";
         }
-        std::cout << "Example: colors.exe red Hello, User!\n";
+        std::cout << "Example: colors.exe red \"Hello, User!\"\n";
         std::cout << "Run colors.exe -install to add this program to your PATH.\n";
         return 0;
     }
@@ -218,18 +218,14 @@ int main(int argc, char* argv[]) {
         addToPathInteractive();
         return 0;
     }
-    if (argc < 3) {
-        std::cerr << "Usage: colors.exe <color> <message>\n";
+    // Require exactly one message argument (a single argv element) so users must quote multi-word messages.
+    if (argc != 3) {
+        std::cerr << "Usage: colors.exe <color> \"<message>\"\n";
+        std::cerr << "Colors: The message must be a single argument; quote it if it contains spaces.\n";
         return 1;
     }
     std::string color = argv[1];
-    std::string message;
-
-    // Join the rest of the args as the message
-    for (int i = 2; i < argc; ++i) {
-        message += argv[i];
-        if (i < argc - 1) message += " ";
-    }
+    std::string message = argv[2];
 
     printColored(color, message);
     return 0;
